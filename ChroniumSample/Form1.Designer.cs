@@ -47,16 +47,18 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(12, 129);
+            this.panel1.Location = new System.Drawing.Point(9, 103);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 283);
+            this.panel1.Size = new System.Drawing.Size(582, 226);
             this.panel1.TabIndex = 0;
             // 
             // request
             // 
-            this.request.Location = new System.Drawing.Point(713, 8);
+            this.request.Location = new System.Drawing.Point(535, 6);
+            this.request.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.request.Name = "request";
-            this.request.Size = new System.Drawing.Size(75, 23);
+            this.request.Size = new System.Drawing.Size(56, 18);
             this.request.TabIndex = 1;
             this.request.Text = "GO";
             this.request.UseVisualStyleBackColor = true;
@@ -64,36 +66,40 @@
             // 
             // reqUrl
             // 
-            this.reqUrl.Location = new System.Drawing.Point(12, 10);
+            this.reqUrl.Location = new System.Drawing.Point(9, 8);
+            this.reqUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reqUrl.Name = "reqUrl";
-            this.reqUrl.Size = new System.Drawing.Size(695, 22);
+            this.reqUrl.Size = new System.Drawing.Size(522, 19);
             this.reqUrl.TabIndex = 2;
             // 
             // source
             // 
             this.source.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.source.Location = new System.Drawing.Point(13, 418);
+            this.source.Location = new System.Drawing.Point(10, 334);
+            this.source.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.source.Multiline = true;
             this.source.Name = "source";
-            this.source.Size = new System.Drawing.Size(775, 70);
+            this.source.Size = new System.Drawing.Size(582, 57);
             this.source.TabIndex = 3;
             // 
             // parseText
             // 
             this.parseText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.parseText.Location = new System.Drawing.Point(12, 495);
+            this.parseText.Location = new System.Drawing.Point(9, 396);
+            this.parseText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.parseText.Name = "parseText";
-            this.parseText.Size = new System.Drawing.Size(695, 22);
+            this.parseText.Size = new System.Drawing.Size(522, 19);
             this.parseText.TabIndex = 4;
             // 
             // parse
             // 
             this.parse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.parse.Location = new System.Drawing.Point(714, 495);
+            this.parse.Location = new System.Drawing.Point(536, 396);
+            this.parse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.parse.Name = "parse";
-            this.parse.Size = new System.Drawing.Size(75, 23);
+            this.parse.Size = new System.Drawing.Size(56, 18);
             this.parse.TabIndex = 5;
             this.parse.Text = "parse";
             this.parse.UseVisualStyleBackColor = true;
@@ -103,25 +109,28 @@
             // 
             this.parseResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.parseResult.Location = new System.Drawing.Point(12, 524);
+            this.parseResult.Location = new System.Drawing.Point(9, 419);
+            this.parseResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.parseResult.Multiline = true;
             this.parseResult.Name = "parseResult";
-            this.parseResult.Size = new System.Drawing.Size(776, 56);
+            this.parseResult.Size = new System.Drawing.Size(583, 46);
             this.parseResult.TabIndex = 6;
             // 
             // setValueTarget
             // 
-            this.setValueTarget.Location = new System.Drawing.Point(12, 38);
+            this.setValueTarget.Location = new System.Drawing.Point(9, 30);
+            this.setValueTarget.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.setValueTarget.Name = "setValueTarget";
-            this.setValueTarget.Size = new System.Drawing.Size(199, 22);
+            this.setValueTarget.Size = new System.Drawing.Size(150, 19);
             this.setValueTarget.TabIndex = 2;
             this.setValueTarget.Text = "q";
             // 
             // setValue
             // 
-            this.setValue.Location = new System.Drawing.Point(713, 38);
+            this.setValue.Location = new System.Drawing.Point(535, 30);
+            this.setValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.setValue.Name = "setValue";
-            this.setValue.Size = new System.Drawing.Size(75, 23);
+            this.setValue.Size = new System.Drawing.Size(56, 18);
             this.setValue.TabIndex = 1;
             this.setValue.Text = "SET";
             this.setValue.UseVisualStyleBackColor = true;
@@ -129,17 +138,19 @@
             // 
             // setValueValue
             // 
-            this.setValueValue.Location = new System.Drawing.Point(217, 38);
+            this.setValueValue.Location = new System.Drawing.Point(163, 30);
+            this.setValueValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.setValueValue.Name = "setValueValue";
-            this.setValueValue.Size = new System.Drawing.Size(490, 22);
+            this.setValueValue.Size = new System.Drawing.Size(368, 19);
             this.setValueValue.TabIndex = 2;
             this.setValueValue.Text = "c#";
             // 
             // click
             // 
-            this.click.Location = new System.Drawing.Point(713, 71);
+            this.click.Location = new System.Drawing.Point(535, 57);
+            this.click.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.click.Name = "click";
-            this.click.Size = new System.Drawing.Size(75, 23);
+            this.click.Size = new System.Drawing.Size(56, 18);
             this.click.TabIndex = 1;
             this.click.Text = "Click";
             this.click.UseVisualStyleBackColor = true;
@@ -147,17 +158,18 @@
             // 
             // clickTarget
             // 
-            this.clickTarget.Location = new System.Drawing.Point(12, 71);
+            this.clickTarget.Location = new System.Drawing.Point(9, 57);
+            this.clickTarget.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clickTarget.Name = "clickTarget";
-            this.clickTarget.Size = new System.Drawing.Size(695, 22);
+            this.clickTarget.Size = new System.Drawing.Size(522, 19);
             this.clickTarget.TabIndex = 2;
             this.clickTarget.Text = "btnK";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 592);
+            this.ClientSize = new System.Drawing.Size(600, 474);
             this.Controls.Add(this.parseResult);
             this.Controls.Add(this.parse);
             this.Controls.Add(this.parseText);
@@ -170,6 +182,7 @@
             this.Controls.Add(this.setValue);
             this.Controls.Add(this.request);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
