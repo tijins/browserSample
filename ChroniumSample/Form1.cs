@@ -22,21 +22,21 @@ namespace ChroniumSample
         {
             InitializeComponent();
 
-            browser = new ChromiumWebBrowser("http://www.google.com/webhp") {
+            browser = new ChromiumWebBrowser("http://www.google.com/webhp") {   //クロムのコンポーネント、スタートアップで開くページを指定できる。
                 Dock = DockStyle.Fill
             };
             panel1.Controls.Add(browser);
 
-            browser.LoadingStateChanged += Browser_LoadingStateChanged;
-            browser.IsBrowserInitializedChanged += Browser_IsBrowserInitializedChanged;
+            browser.LoadingStateChanged += Browser_LoadingStateChanged;         //1ページ読み込まれることにイベント発生。
+            browser.IsBrowserInitializedChanged += Browser_IsBrowserInitializedChanged;         //コンポーネントが呼ばれた時だけ1回だけイベント発生。
         }
 
         private void Browser_IsBrowserInitializedChanged(object sender, EventArgs e)
         {
-            browser.ShowDevTools();
+            browser.ShowDevTools();        //開発者ツールを出すツール。Javascriptのerrorを分かる為。
         }
             
-        private async void Browser_LoadingStateChanged(object sender, CefSharp.LoadingStateChangedEventArgs e)
+        private async void Browser_LoadingStateChanged(object sender, CefSharp.LoadingStateChangedEventArgs e)        //30行目の中身
         {
             if (!e.IsLoading)
             {
@@ -70,18 +70,18 @@ namespace ChroniumSample
             }
         }
 
-        private void setValue_Click(object sender, EventArgs e)
+        private void setValue_Click(object sender, EventArgs e)     //JavaScriptを使って入力をしている。
         {
             var jsTemplate = "document.getElementsByName('{0}')[0].value = '{1}'";
             var js = String.Format(jsTemplate, setValueTarget.Text, setValueValue.Text);
             browser.ExecuteScriptAsync(js);
         }
 
-        private void click_Click(object sender, EventArgs e)
+        private void click_Click(object sender, EventArgs e)     //JavaScriptを使ってクリックをしている。
         {
             var jsTemplate = "document.getElementsByName('{0}')[0].click()";
             var js = String.Format(jsTemplate, clickTarget.Text);
-            browser.ExecuteScriptAsync(js);
+            browser.ExecuteScriptAsync(js);        //document.getElementsByName('btnK')[0].click()の[0]は配列の1番目という意味
         }
     }
 }
