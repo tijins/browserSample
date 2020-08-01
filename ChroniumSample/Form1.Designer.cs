@@ -54,6 +54,7 @@
             // 
             // request
             // 
+            this.request.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.request.Location = new System.Drawing.Point(713, 8);
             this.request.Name = "request";
             this.request.Size = new System.Drawing.Size(75, 23);
@@ -64,6 +65,8 @@
             // 
             // reqUrl
             // 
+            this.reqUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reqUrl.Location = new System.Drawing.Point(12, 10);
             this.reqUrl.Name = "reqUrl";
             this.reqUrl.Size = new System.Drawing.Size(695, 22);
@@ -119,6 +122,7 @@
             // 
             // setValue
             // 
+            this.setValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.setValue.Location = new System.Drawing.Point(713, 38);
             this.setValue.Name = "setValue";
             this.setValue.Size = new System.Drawing.Size(75, 23);
@@ -129,6 +133,8 @@
             // 
             // setValueValue
             // 
+            this.setValueValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.setValueValue.Location = new System.Drawing.Point(217, 38);
             this.setValueValue.Name = "setValueValue";
             this.setValueValue.Size = new System.Drawing.Size(490, 22);
@@ -137,6 +143,7 @@
             // 
             // click
             // 
+            this.click.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.click.Location = new System.Drawing.Point(713, 71);
             this.click.Name = "click";
             this.click.Size = new System.Drawing.Size(75, 23);
@@ -147,6 +154,8 @@
             // 
             // clickTarget
             // 
+            this.clickTarget.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clickTarget.Location = new System.Drawing.Point(12, 71);
             this.clickTarget.Name = "clickTarget";
             this.clickTarget.Size = new System.Drawing.Size(695, 22);
