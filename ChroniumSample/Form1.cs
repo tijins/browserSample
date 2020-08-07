@@ -3,10 +3,13 @@ using AngleSharp.Html.Parser;
 using CefSharp;
 using CefSharp.WinForms;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,7 +88,40 @@ namespace ChroniumSample
 
         private void readCsv_Click(object sender, EventArgs e)
         {
+            var dataList = new ArrayList();
+            using(var stream = new StreamReader("test.csv", Encoding.UTF8))
+            {
+                var text = stream.ReadToEnd();                
+                //改行コードで分割する
+                var lines = text.Split(new String[] { "\r\n","\n" }, StringSplitOptions.RemoveEmptyEntries);
 
+                if(lines.Length == 0)
+                {
+                    //空のファイル
+                    return;
+                }
+
+                //一行目はヘッダー
+                Debug.Print(lines[0]);
+
+                //一行ずつを処理する
+                for(int i=1; i<lines.Length; i++)
+                {
+                    Debug.Print(lines[i]);
+                    var cols = lines[i].Split(new String[] { "," }, StringSplitOptions.None);
+                    if(cols.Length >= 3)
+                    {
+                        var data = new Article()
+                        {
+                            Title = cols[0],
+                            Content = cols[1],
+                            Score = int.Parse(cols[2])
+                        };
+                        dataList.Add(data);
+                    }
+                }
+
+            }
         }
 
         private void showDevTools_Click(object sender, EventArgs e)
