@@ -33,7 +33,6 @@ namespace ChroniumSample
 
         private void Browser_IsBrowserInitializedChanged(object sender, EventArgs e)
         {
-            browser.ShowDevTools();        //開発者ツールを出すツール。Javascriptのerrorを分かる為。
         }
             
         private async void Browser_LoadingStateChanged(object sender, CefSharp.LoadingStateChangedEventArgs e)        //30行目の中身
@@ -82,6 +81,16 @@ namespace ChroniumSample
             var jsTemplate = "document.getElementsByName('{0}')[0].click()";
             var js = String.Format(jsTemplate, clickTarget.Text);
             browser.ExecuteScriptAsync(js);        //document.getElementsByName('btnK')[0].click()の[0]は配列の1番目という意味
+        }
+
+        private void readCsv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showDevTools_Click(object sender, EventArgs e)
+        {
+            browser.ShowDevTools();        //開発者ツールを出すツール。Javascriptのerrorを分かる為。
         }
     }
 }

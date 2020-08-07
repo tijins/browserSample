@@ -40,6 +40,11 @@
             this.setValueValue = new System.Windows.Forms.TextBox();
             this.click = new System.Windows.Forms.Button();
             this.clickTarget = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readCsv = new System.Windows.Forms.ToolStripMenuItem();
+            this.showDevTools = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,7 +60,7 @@
             // request
             // 
             this.request.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.request.Location = new System.Drawing.Point(713, 8);
+            this.request.Location = new System.Drawing.Point(713, 38);
             this.request.Name = "request";
             this.request.Size = new System.Drawing.Size(75, 23);
             this.request.TabIndex = 1;
@@ -67,7 +72,7 @@
             // 
             this.reqUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.reqUrl.Location = new System.Drawing.Point(12, 10);
+            this.reqUrl.Location = new System.Drawing.Point(12, 40);
             this.reqUrl.Name = "reqUrl";
             this.reqUrl.Size = new System.Drawing.Size(695, 22);
             this.reqUrl.TabIndex = 2;
@@ -114,7 +119,7 @@
             // 
             // setValueTarget
             // 
-            this.setValueTarget.Location = new System.Drawing.Point(12, 38);
+            this.setValueTarget.Location = new System.Drawing.Point(12, 68);
             this.setValueTarget.Name = "setValueTarget";
             this.setValueTarget.Size = new System.Drawing.Size(199, 22);
             this.setValueTarget.TabIndex = 2;
@@ -123,7 +128,7 @@
             // setValue
             // 
             this.setValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.setValue.Location = new System.Drawing.Point(713, 38);
+            this.setValue.Location = new System.Drawing.Point(713, 68);
             this.setValue.Name = "setValue";
             this.setValue.Size = new System.Drawing.Size(75, 23);
             this.setValue.TabIndex = 1;
@@ -135,7 +140,7 @@
             // 
             this.setValueValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.setValueValue.Location = new System.Drawing.Point(217, 38);
+            this.setValueValue.Location = new System.Drawing.Point(217, 68);
             this.setValueValue.Name = "setValueValue";
             this.setValueValue.Size = new System.Drawing.Size(490, 22);
             this.setValueValue.TabIndex = 2;
@@ -144,7 +149,7 @@
             // click
             // 
             this.click.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.click.Location = new System.Drawing.Point(713, 71);
+            this.click.Location = new System.Drawing.Point(713, 101);
             this.click.Name = "click";
             this.click.Size = new System.Drawing.Size(75, 23);
             this.click.TabIndex = 1;
@@ -156,11 +161,45 @@
             // 
             this.clickTarget.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clickTarget.Location = new System.Drawing.Point(12, 71);
+            this.clickTarget.Location = new System.Drawing.Point(12, 101);
             this.clickTarget.Name = "clickTarget";
             this.clickTarget.Size = new System.Drawing.Size(695, 22);
             this.clickTarget.TabIndex = 2;
             this.clickTarget.Text = "btnK";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDevTools,
+            this.readCsv});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // readCsv
+            // 
+            this.readCsv.Name = "readCsv";
+            this.readCsv.Size = new System.Drawing.Size(224, 26);
+            this.readCsv.Text = "CSV読み込み";
+            this.readCsv.Click += new System.EventHandler(this.readCsv_Click);
+            // 
+            // showDevTools
+            // 
+            this.showDevTools.Name = "showDevTools";
+            this.showDevTools.Size = new System.Drawing.Size(224, 26);
+            this.showDevTools.Text = "DevTools";
+            this.showDevTools.Click += new System.EventHandler(this.showDevTools_Click);
             // 
             // Form1
             // 
@@ -179,8 +218,12 @@
             this.Controls.Add(this.setValue);
             this.Controls.Add(this.request);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +243,10 @@
         private System.Windows.Forms.TextBox setValueValue;
         private System.Windows.Forms.Button click;
         private System.Windows.Forms.TextBox clickTarget;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem readCsv;
+        private System.Windows.Forms.ToolStripMenuItem showDevTools;
     }
 }
 
