@@ -42,6 +42,7 @@ namespace ChroniumSample
         {
             if (!e.IsLoading)
             {
+                Debug.Print("url=" + e.Browser.MainFrame.Url);
                 var text = await e.Browser.MainFrame.GetSourceAsync();
                 this.Invoke((MethodInvoker)delegate {
                     source.Text = text;
