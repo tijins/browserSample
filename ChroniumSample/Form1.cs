@@ -20,7 +20,7 @@ namespace ChroniumSample
     public partial class Form1 : Form
     {
         private ChromiumWebBrowser browser;
-
+        private List<SiteSettings> sites = new List<SiteSettings>();
         public Form1()
         {
             InitializeComponent();
@@ -89,7 +89,6 @@ namespace ChroniumSample
 
         private void readCsv_Click(object sender, EventArgs e)
         {
-            var dataList = new ArrayList();
             using(var stream = new StreamReader("test.csv", Encoding.UTF8))
             {
                 var text = stream.ReadToEnd();                
@@ -112,13 +111,13 @@ namespace ChroniumSample
                     var cols = lines[i].Split(new String[] { "," }, StringSplitOptions.None);
                     if(cols.Length >= 3)
                     {
-                        var data = new Article()
+                        var data = new SiteSettings()
                         {
-                            Title = cols[0],
-                            Content = cols[1],
-                            Score = int.Parse(cols[2])
+                            Name = cols[0],
+                            Url = cols[1],
+                            Sound = cols[2]
                         };
-                        dataList.Add(data);
+                        sites.Add(data);
                     }
                 }
 

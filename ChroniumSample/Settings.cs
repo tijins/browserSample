@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChroniumSample
 {
-    class Article
+    class SiteSettings
     {
-        public string Title { get; set; }
+        public string Name { get; set; }
 
-        public string Content { get; set; }
+        public string Url { get; set; }
 
-        public int Score { get; set; }
+        public string Sound { get; set; }
     }
 }
