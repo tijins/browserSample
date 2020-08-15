@@ -28,6 +28,7 @@ namespace ChroniumSample
         {
             InitializeComponent();
 
+            Cef.EnableHighDPISupport();
             browser = new ChromiumWebBrowser("http://www.google.com/webhp") {   //クロムのコンポーネント、スタートアップで開くページを指定できる。
                 Dock = DockStyle.Fill
             };
