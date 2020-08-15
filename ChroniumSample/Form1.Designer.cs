@@ -42,8 +42,9 @@
             this.clickTarget = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.readCsv = new System.Windows.Forms.ToolStripMenuItem();
             this.showDevTools = new System.Windows.Forms.ToolStripMenuItem();
+            this.readCsv = new System.Windows.Forms.ToolStripMenuItem();
+            this.playSound = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,10 +183,18 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showDevTools,
-            this.readCsv});
+            this.readCsv,
+            this.playSound});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // showDevTools
+            // 
+            this.showDevTools.Name = "showDevTools";
+            this.showDevTools.Size = new System.Drawing.Size(224, 26);
+            this.showDevTools.Text = "DevTools";
+            this.showDevTools.Click += new System.EventHandler(this.showDevTools_Click);
             // 
             // readCsv
             // 
@@ -194,12 +203,12 @@
             this.readCsv.Text = "CSV読み込み";
             this.readCsv.Click += new System.EventHandler(this.readCsv_Click);
             // 
-            // showDevTools
+            // playSound
             // 
-            this.showDevTools.Name = "showDevTools";
-            this.showDevTools.Size = new System.Drawing.Size(224, 26);
-            this.showDevTools.Text = "DevTools";
-            this.showDevTools.Click += new System.EventHandler(this.showDevTools_Click);
+            this.playSound.Name = "playSound";
+            this.playSound.Size = new System.Drawing.Size(224, 26);
+            this.playSound.Text = "サウンド";
+            this.playSound.Click += new System.EventHandler(this.playSound_Click);
             // 
             // Form1
             // 
@@ -247,6 +256,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem readCsv;
         private System.Windows.Forms.ToolStripMenuItem showDevTools;
+        private System.Windows.Forms.ToolStripMenuItem playSound;
     }
 }
 

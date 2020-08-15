@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace ChroniumSample
 {
@@ -21,6 +22,8 @@ namespace ChroniumSample
     {
         private ChromiumWebBrowser browser;
         private List<SiteSettings> sites = new List<SiteSettings>();
+        private WindowsMediaPlayer wmp = new WindowsMediaPlayer();
+
         public Form1()
         {
             InitializeComponent();
@@ -127,6 +130,12 @@ namespace ChroniumSample
         private void showDevTools_Click(object sender, EventArgs e)
         {
             browser.ShowDevTools();        //開発者ツールを出すツール。Javascriptのerrorを分かる為。
+        }
+
+        private void playSound_Click(object sender, EventArgs e)
+        {
+            wmp.URL = @"trumpet1.mp3";
+            wmp.controls.play();
         }
     }
 }
